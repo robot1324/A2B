@@ -28,13 +28,9 @@ screen = pygame.display.set_mode([screen_width, screen_height])
 pygame.display.set_caption("A_to_B")
 
 
-
 clock = pygame.time.Clock()
 
-
-
-
-
+############################################
 
 def intro():
     intro = True
@@ -73,10 +69,7 @@ def intro():
         pygame.display.update()                       
         clock.tick(10)
 
-
-
-
-
+############################################
 
 
 all_block_list = pygame.sprite.Group()
@@ -123,16 +116,6 @@ def make_moving_hor(x,y, width, height, colour):
 
 
 
-def make_blinking_obs(x,y, width, height, colour):
-
-    obstacle = Obstacle(x,y, width, height, colour)
-    obstacle_list.add(obstacle)
-    blinking_obs_list.add(obstacle)
-    all_block_list.add(obstacle)
-
-
-
-
 def make_coin(x,y):
     
     global coin_count
@@ -150,10 +133,7 @@ def make_coin(x,y):
         max_coin += 1
 
 
-
-
-
-
+############################################
 
 
 
@@ -171,8 +151,6 @@ class Wall(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-
-
 
 
 
@@ -217,22 +195,8 @@ class Obstacle(Wall):
             
         
                 
-##    def blink(self,lst):
-##
-##        for item in lst:
-##            blink = True
-##            if blink == True:
-##                lst.remove(item)
-##                time.sleep(2)
-##                blink == False
-##            else:
-##                lst.add(item)
-##                lst.draw(screen)
-##                pygame.display.flip()
-        
-
-        
-        
+############################################
+  
 
 
 class Coin(pygame.sprite.Sprite):
